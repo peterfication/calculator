@@ -1,4 +1,73 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <button drab-event="click" drab-handler="count"><%= @counter %></button>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Calculator</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div id="display" class="col-xs-12">
+        <div class="well">
+          <%= @display %>
+        </div>
+      </div>
+    </div>
+    <div class="row dist-top">
+      <div class="col-xs-3">
+        <button drab-click="number_7" class="btn btn-default btn-block">7</button>
+      </div>
+      <div class="col-xs-3">
+        <button drab-click="number_8" class="btn btn-default btn-block">8</button>
+      </div>
+      <div class="col-xs-3">
+        <button drab-click="number_9" class="btn btn-default btn-block">9</button>
+      </div>
+      <div class="col-xs-3">
+        <button drab-click="divide" class="btn btn-warning btn-block">/</button>
+      </div>
+    </div>
+    <div class="row dist-top">
+      <div class="col-xs-3">
+        <button drab-click="number_4" class="btn btn-default btn-block">4</button>
+      </div>
+      <div class="col-xs-3">
+        <button drab-click="number_5" class="btn btn-default btn-block">5</button>
+      </div>
+      <div class="col-xs-3">
+        <button drab-click="number_6" class="btn btn-default btn-block">6</button>
+      </div>
+      <div class="col-xs-3">
+        <button drab-click="multiply" class="btn btn-warning btn-block">*</button>
+      </div>
+    </div>
+    <div class="row dist-top">
+      <div class="col-xs-3">
+        <button drab-click="number_1" class="btn btn-default btn-block">1</button>
+      </div>
+      <div class="col-xs-3">
+        <button drab-click="number_2" class="btn btn-default btn-block">2</button>
+      </div>
+      <div class="col-xs-3">
+        <button drab-click="number_3" class="btn btn-default btn-block">3</button>
+      </div>
+      <div class="col-xs-3">
+        <button drab-click="subtract" class="btn btn-warning btn-block">-</button>
+      </div>
+    </div>
+    <div class="row dist-top">
+      <div class="col-xs-3">
+        <button drab-click="number_0" class="btn btn-default btn-block">0</button>
+      </div>
+      <div class="col-xs-3">
+        <button drab-click="clear" class="btn btn-warning btn-block">AC</button>
+      </div>
+      <div class="col-xs-3">
+        <button drab-click="calculate" class="btn btn-warning btn-block">=</button>
+      </div>
+      <div class="col-xs-3">
+        <button drab-click="add" class="btn btn-warning btn-block">+</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+
+  </div>
 </div>

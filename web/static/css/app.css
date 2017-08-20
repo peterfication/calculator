@@ -1,1 +1,8 @@
 /* This file is for your main application css. */
+.dist-top {
+  margin-top: 10px;
+}
+
+#display .well {
+  height: 60px;
+}
