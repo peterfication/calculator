@@ -11,5 +11,12 @@ defmodule Calculator.PageCommander do
   onload :page_loaded
   def page_loaded(socket) do
     set_prop socket, "div.jumbotron h2", innerText: "This page has been drabbed"
+    poke socket, counter: 1
+  end
+
+  def count(socket, sender) do
+    counter = peek(socket, :counter)
+    counter = counter + 1
+    poke socket, counter: counter
   end
 end
