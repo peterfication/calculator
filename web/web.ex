@@ -16,23 +16,11 @@ defmodule Calculator.Web do
   below.
   """
 
-  def model do
-    quote do
-      use Ecto.Schema
-
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query
-    end
-  end
-
   def controller do
     quote do
       use Phoenix.Controller
 
       alias Calculator.Repo
-      import Ecto
-      import Ecto.Query
 
       import Calculator.Router.Helpers
       import Calculator.Gettext
@@ -66,8 +54,6 @@ defmodule Calculator.Web do
       use Phoenix.Channel
 
       alias Calculator.Repo
-      import Ecto
-      import Ecto.Query
       import Calculator.Gettext
     end
   end

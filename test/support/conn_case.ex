@@ -21,10 +21,6 @@ defmodule Calculator.ConnCase do
       use Phoenix.ConnTest
 
       alias Calculator.Repo
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query
-
       import Calculator.Router.Helpers
 
       # The default endpoint for testing
@@ -33,12 +29,6 @@ defmodule Calculator.ConnCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Calculator.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Calculator.Repo, {:shared, self()})
-    end
-
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end

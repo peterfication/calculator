@@ -18,8 +18,7 @@ defmodule Calculator.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {Calculator, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :drab]]
+     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :drab]]
   end
 
   # Specifies which paths to compile per environment.
@@ -32,8 +31,6 @@ defmodule Calculator.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.2.4"},
      {:phoenix_pubsub, "~> 1.0"},
-     {:phoenix_ecto, "~> 3.0"},
-     {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
@@ -48,8 +45,6 @@ defmodule Calculator.Mixfile do
   #
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
-    ["ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
-     "ecto.reset": ["ecto.drop", "ecto.setup"],
-     "test": ["ecto.create --quiet", "ecto.migrate", "test"]]
+    []
   end
 end

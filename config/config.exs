@@ -5,10 +5,6 @@
 # is restricted to this project.
 use Mix.Config
 
-# General application configuration
-config :calculator,
-  ecto_repos: [Calculator.Repo]
-
 # Configures the endpoint
 config :calculator, Calculator.Endpoint,
   url: [host: "localhost"],

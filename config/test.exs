@@ -8,12 +8,3 @@ config :calculator, Calculator.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
-
-# Configure your database
-config :calculator, Calculator.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "calculator_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox

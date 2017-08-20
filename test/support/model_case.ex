@@ -18,20 +18,11 @@ defmodule Calculator.ModelCase do
     quote do
       alias Calculator.Repo
 
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query
       import Calculator.ModelCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Calculator.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Calculator.Repo, {:shared, self()})
-    end
-
     :ok
   end
 
@@ -59,7 +50,6 @@ defmodule Calculator.ModelCase do
   """
   def errors_on(struct, data) do
     struct.__struct__.changeset(struct, data)
-    |> Ecto.Changeset.traverse_errors(&Calculator.ErrorHelpers.translate_error/1)
     |> Enum.flat_map(fn {key, errors} -> for msg <- errors, do: {key, msg} end)
   end
 end
